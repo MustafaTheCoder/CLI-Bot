@@ -7,11 +7,16 @@ def Help():
 def changePrefix():
         x = str(input("New Prefix: "))
         with open("data/prefix.txt", "w") as f:
-                prefix = f.write(x)
-        print(f"Prefix Reseted: {prefix}")        
+                f.write(x)
+
+        with open("data/prefix.txt", "r") as f:
+                prefix = f.read(x)
+
+        print(f"Prefix Resetted: {prefix}")        
 
 
 if __name__ == "__main__":
     Help()
+    changePrefix()
 
 
